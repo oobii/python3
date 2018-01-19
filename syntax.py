@@ -3,7 +3,12 @@ def main():
     egg()
 
 
-def egg():
-     print("egg")
+print("This line printed before one in main()")
 
-if __name__ == "__main__": main()
+
+def egg():
+    print("egg")
+
+
+if __name__ == "__main__":
+    main()
