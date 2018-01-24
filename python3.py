@@ -63,11 +63,24 @@ for k, v in d.items():
 
 # dont use subscript
 #  x['three']
+# use dict.get(index) to avoid Key error if no Key found
 
 print("using get method, the key is {}".format(d.get('three', 'not there')))
 
 print("using get method, {}".format(ddd.get('three')))
 
-del d['four']
+print(d)
 
-d.pop('five')
+try:
+    del d['four']
+    d.pop('five')
+
+except KeyError as e:
+    print("Error is detected: {}".format(e))
+
+
+import datetime
+
+now = datetime.datetime.now()
+print(now)
+print(now.year,now.day)
